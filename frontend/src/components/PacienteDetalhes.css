@@ -1,0 +1,61 @@
+.titulo-ficha{ text-align: start;  margin-bottom: 50px;}
+
+.ficha{ display: block; width: 80vw; max-width: 800px; margin: 0 auto 30px; border: 10px solid #05acbd; padding: 30px; border-radius: 20px; background-color: #fff; position: relative;}
+  .ficha::before{ content: ""; display: block; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 400 160'%3E%3Cpath fill='%23BDC3C7' fill-rule='evenodd' d='M376 160H24a24.003 24.003 0 0 1-24-24V80a24 24 0 0 1 24-24h120a56 56 0 0 1 112 0h120a24.002 24.002 0 0 1 24 24v56c0 6.365-2.529 12.47-7.029 16.971A24.005 24.005 0 0 1 376 160ZM200 32a23.994 23.994 0 0 0-16.971 7.03 24.007 24.007 0 0 0-5.202 26.154 24.007 24.007 0 0 0 12.989 12.99A24.002 24.002 0 0 0 224 56a24.003 24.003 0 0 0-24-24.001Z' clip-rule='evenodd'/%3E%3C/svg%3E"); background-repeat: no-repeat; width: 150px; height: 60px; position: absolute; top: -50px; left: 50%; transform: translateX(-50%);}
+
+#paciente{ display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #ccc; padding: 10px 10px 20px;}
+  #paciente p{ font-size: 26px; }
+
+.infos-paciente{padding: 10px;}
+.infos-paciente p{padding: 10px;}
+
+em.botoes{ display: flex; align-items: center; justify-content: flex-end; gap: 20px; }
+  em.botoes .atualizar{ width: 161px;  margin: 0;}
+
+em.espaco{ display: block; width: 100%; height: 1px; background-color: #ccc;}
+
+#deletar{ display: block; width: 40px; height: 30px; padding-left: 10px; background-color: #fff; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 23 23'%3E%3Cpath fill='%23516D8A' fill-rule='evenodd' d='M9.467 3.306a2.875 2.875 0 0 1 4.789 1.212h-5.51c.134-.454.38-.871.721-1.212ZM6.225 4.518a5.34 5.34 0 0 1 10.551 0h4.582a1.232 1.232 0 0 1 0 2.464h-1.643v13.554A2.465 2.465 0 0 1 17.25 23H5.75a2.464 2.464 0 0 1-2.464-2.464V6.982H1.643a1.232 1.232 0 1 1 0-2.464h4.582Zm1.99 5.136c.567 0 1.026.46 1.026 1.027v6.574a1.027 1.027 0 0 1-2.053 0V10.68c0-.567.46-1.027 1.027-1.027Zm7.598 1.027a1.027 1.027 0 1 0-2.054 0v6.574a1.027 1.027 0 0 0 2.054 0V10.68Z' clip-rule='evenodd'/%3E%3C/svg%3E"); background-repeat: no-repeat; border: none; cursor: pointer; transition: 0.4s;}
+
+
+/* estilo do modal */
+
+.modal-overlay {  background-color: rgba(0, 0, 0, 0.75) !important; }
+  .modal-paciente { display: block; position: absolute; width: 100%; max-width: 600px; height: fit-content; top: 20%; left: 50%; transform: translateX(-50%); background: #ecfdff !important; padding: 30px 30px 50px; border: 1px solid #ccc; } 
+    .modal-paciente .btn-fechar{ background-color: rgba(0, 0, 0, 0); border: 0; margin: 10px; transform: scale(2); cursor: pointer; float: right; }
+    .modal-paciente label{ display: block;  margin: 10px 0 5px; }
+    .modal-paciente input, .modal-paciente textarea{ width: 100%; height: auto; border: 0; border-radius: 5px; background: rgba(0, 172, 189, 0.1); padding: 5px; }
+
+
+/* estilo do exame */
+.btn-exame{ padding: 10px 40px 10px 20px; position: relative; }
+  .btn-exame::before{ content: ""; display: block; position:absolute; width: 20px; height: 20px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 11v4m2-2h-4m-5 6h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-6.672a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 8.672 5H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E"); background-repeat: no-repeat; right: 13px; top: 9px; }
+
+
+th#campo-anex{ width: 292px;}
+th#campo-delet{ width: 40px; }
+
+#abrir-exame, #download{ border: 2px solid #F6FCFF; width: max-content; font-family: "Montserrat", sans-serif; background-color: #516D8A; color: #fff; padding: 5px 33px 5px 10px; border-radius: 5px; cursor: pointer; position: relative; transition: 0.4s; font-size: 0.8em; }
+  #abrir-exame:hover, #download:hover{ background-color: #64AFA7;}
+    #abrir-exame::before{ content: ""; display: block; position: absolute; width: 18px; height: 18px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' stroke='%23fff' stroke-width='.32' viewBox='-3.2 -3.2 38.4 38.4'%3E%3Cpath d='M27.49 26.07a5.76 5.76 0 1 0-1.42 1.42l4.22 4.22a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42ZM19 22.77a3.77 3.77 0 1 1 3.77 3.76A3.77 3.77 0 0 1 19 22.77Z'/%3E%3Cpath d='M30 6.5H16.33L12.6 3.7l-.1-.05-.19-.09h-.2L12 3.5H2a2 2 0 0 0-2 2v21a2 2 0 0 0 2 2h12a1 1 0 0 0 0-2H2v-21h9.67l3.73 2.8.13.07.12.06a1 1 0 0 0 .35.07h14v7.81a1 1 0 1 0 2 0V8.5a2 2 0 0 0-2-2Z'/%3E%3C/svg%3E"); background-repeat: no-repeat; top:4px; right: 9px; }
+    #download::before{ content: ""; display: block; position: absolute; width: 17px; height: 17px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m16 11-4 4m0 0-4-4m4 4V3m9 12v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2'/%3E%3C/svg%3E"); background-repeat: no-repeat; top:5px; right: 9px; }
+  #excluir-exame{ display: block; width: 20px; height: 20px; background-color: transparent; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 23 23'%3E%3Cpath fill='%23516D8A' fill-rule='evenodd' d='M9.467 3.306a2.875 2.875 0 0 1 4.789 1.212h-5.51c.134-.454.38-.871.721-1.212ZM6.225 4.518a5.34 5.34 0 0 1 10.551 0h4.582a1.232 1.232 0 0 1 0 2.464h-1.643v13.554A2.465 2.465 0 0 1 17.25 23H5.75a2.464 2.464 0 0 1-2.464-2.464V6.982H1.643a1.232 1.232 0 1 1 0-2.464h4.582Zm1.99 5.136c.567 0 1.026.46 1.026 1.027v6.574a1.027 1.027 0 0 1-2.053 0V10.68c0-.567.46-1.027 1.027-1.027Zm7.598 1.027a1.027 1.027 0 1 0-2.054 0v6.574a1.027 1.027 0 0 0 2.054 0V10.68Z' clip-rule='evenodd'/%3E%3C/svg%3E"); background-repeat: no-repeat; position: relative; transition: 0.4s;}
+      #excluir-exame:hover, #deletar:hover{ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 23 23'%3E%3Cpath fill='%23EB172C' fill-rule='evenodd' d='M9.467 3.306a2.875 2.875 0 0 1 4.789 1.212h-5.51c.134-.454.38-.871.721-1.212ZM6.225 4.518a5.34 5.34 0 0 1 10.551 0h4.582a1.232 1.232 0 0 1 0 2.464h-1.643v13.554A2.465 2.465 0 0 1 17.25 23H5.75a2.464 2.464 0 0 1-2.464-2.464V6.982H1.643a1.232 1.232 0 1 1 0-2.464h4.582Zm1.99 5.136c.567 0 1.026.46 1.026 1.027v6.574a1.027 1.027 0 0 1-2.053 0V10.68c0-.567.46-1.027 1.027-1.027Zm7.598 1.027a1.027 1.027 0 1 0-2.054 0v6.574a1.027 1.027 0 0 0 2.054 0V10.68Z' clip-rule='evenodd'/%3E%3C/svg%3E"); }
+
+.msg-deletar{display: block; position: relative; padding: 20px 20px 20px 50px;}
+#figure-atencao{position: absolute; top: 35px; left: 30px;}
+.btn-claro{border-radius: 5px; font-size: 15px;}
+
+/* mensagem de acesso negado ao historico do paciente */
+span.acessoNegado{display: block; width: 100%; position: relative; border: 1px solid #ccc; padding: 20px 20px 20px 100px; border-radius: 5px; background-color: rgb(76 91 106 / 6%); min-height: 93px; }
+    span.acessoNegado::before{content: "";display: block; position: absolute; width: 57px; height: 63px;background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 67 73'%3E%3Cpath fill='%2397979B' d='M63.18 41.62H59.8v-7.03c0-4.57-3.78-8.3-8.43-8.3a8.37 8.37 0 0 0-8.42 8.3v7.03h-3.37a2.82 2.82 0 0 0-2.81 2.81v17.72a42.66 42.66 0 0 1-6.74 3.96C13.8 58.5 6 42.93 5.64 17.36c13.01-.76 20.85-6.71 24.41-10.27 3.57 3.56 11.4 9.5 24.42 10.27 0 .85-.03 1.68-.05 2.51a2.82 2.82 0 0 0 2.7 2.92 2.82 2.82 0 0 0 2.91-2.72c.06-1.76.09-3.6.07-5.46a2.8 2.8 0 0 0-2.8-2.8c-7.25 0-13.64-1.77-19-5.27a23.63 23.63 0 0 1-5.94-5.32 2.8 2.8 0 0 0-4.6 0c-.1.14-2.02 2.75-5.95 5.32-5.36 3.5-11.75 5.27-19 5.27-2.31.37-2.8 1.26-2.8 2.79-.1 15.06 2.13 26.93 6.76 36.29a43.18 43.18 0 0 0 9.11 12.4 45.21 45.21 0 0 0 13.05 8.47 2.83 2.83 0 0 0 2.25 0 46.94 46.94 0 0 0 10.3-6.1l.16-.14h21.55c1.55 0 2.81-1.27 2.81-2.82V44.42a2.82 2.82 0 0 0-2.8-2.82l-.02.02Zm-14.6-7.03a2.75 2.75 0 0 1 2.8-2.68c1.55 0 2.81 1.2 2.81 2.68v7.03h-5.62v-7.03ZM60.36 59.9H42.4V47.25h17.97V59.9Z'/%3E%3C/svg%3E"); top: 50%; transform: translateY(-50%); left: 20px; user-select: none; background-repeat: no-repeat;    opacity: 0.6;}
+  span.acessoNegado b{display: block; text-transform: uppercase; font-weight: bold;opacity: 0.7;}
+  span.acessoNegado i{display: block; opacity: 0.7;user-select: none;}
+
+/* mensagem de acesso negado ao historico na modal */
+span.acessoBloq{display: block;}
+  span.acessoBloq b{display: block; margin: 10px 0 5px;}
+  span.acessoBloq i{display: block; position: relative; width: 100%; height: auto; border: 0; border-radius: 5px; background-color: rgb(76 91 106 / 10%); padding: 8px 10px 8px 50px; font-size: 14px; line-height: 18px; color: #706d6d; user-select: none;}
+    span.acessoBloq i::before{content: ""; display: block; position: absolute;width: 20px; height: 27px;background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='27' fill='none'%3E%3Cpath fill='%2397979B' d='M17.78 10V7.78a7.79 7.79 0 0 0-15.56 0V10H.56c-.31 0-.56.25-.56.56v13.89c0 1.22 1 2.22 2.22 2.22h15.56c1.23 0 2.23-1 2.23-2.22v-13.9c0-.3-.25-.55-.56-.55h-1.67Zm-6.12 11.6a.55.55 0 0 1-.14.44.55.55 0 0 1-.41.18H8.89a.55.55 0 0 1-.42-.18.57.57 0 0 1-.14-.44l.35-3.15a2.2 2.2 0 0 1-.9-1.78 2.23 2.23 0 0 1 4.44 0c0 1.23-.34 1.37-.91 1.78l.35 3.15ZM14.44 10H5.56V7.78a4.45 4.45 0 0 1 8.88 0V10Z'/%3E%3C/svg%3E"); top: 50%; transform: translateY(-50%); left: 15px; user-select: none; background-repeat: no-repeat; opacity: 0.6;}
+
+span.semAutoriza{display: block; width: 40px; height: 30px; padding-left: 10px; background-color: #fff; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 23 23'%3E%3Cpath fill='%23516D8A' fill-rule='evenodd' d='M9.467 3.306a2.875 2.875 0 0 1 4.789 1.212h-5.51c.134-.454.38-.871.721-1.212ZM6.225 4.518a5.34 5.34 0 0 1 10.551 0h4.582a1.232 1.232 0 0 1 0 2.464h-1.643v13.554A2.465 2.465 0 0 1 17.25 23H5.75a2.464 2.464 0 0 1-2.464-2.464V6.982H1.643a1.232 1.232 0 1 1 0-2.464h4.582Zm1.99 5.136c.567 0 1.026.46 1.026 1.027v6.574a1.027 1.027 0 0 1-2.053 0V10.68c0-.567.46-1.027 1.027-1.027Zm7.598 1.027a1.027 1.027 0 1 0-2.054 0v6.574a1.027 1.027 0 0 0 2.054 0V10.68Z' clip-rule='evenodd'/%3E%3C/svg%3E"); background-repeat: no-repeat; border: none; position: relative;filter: grayscale(1); opacity: 0.3; transition: all 0.5s ease;user-select: none;}
+

@@ -1,0 +1,84 @@
+.medicos-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.medicos-title {
+  color: #2c3e50;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.medicos-title2{
+  margin: 40px auto 30px;
+}
+
+.medicos-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.medicos-list li {
+  background-color: rgb(228 242 249);
+  padding: 20px 30px 20px 80px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  transition: all 0.5s ease;
+  max-width: 630px;
+  margin: 0 auto 10px;
+} 
+
+  .medicos-list li::before{content: "";display: block;position: absolute; width: 50px; height: 50px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60' fill='%2364AFA7'%3E%3Cpath d='M17.63 19.88c0 1.16 0 4.53 2.38 5.35 2.09 5.41 5.97 8.88 10 8.88s7.9-3.47 9.99-8.88c2.39-.82 2.39-4.19 2.39-5.35 0-.89-.37-1.57-1-1.94v-.03C41.4 9.46 37.47 5 30.02 5c-7.46 0-11.4 4.46-11.4 12.91v.03c-.62.37-.99 1.05-.99 1.94zm2-.22a.2.2 0 0 1 .1-.02l.08-.02c.06-.02.12-.03.17-.06a.75.75 0 0 0 .18-.08l.14-.11.14-.16a.43.43 0 0 0 .06-.07c.87-1.5 2.32-3.19 2.98-3.19.55 0 1.1.17 1.78.4 1.1.35 2.48.79 4.68.79 2.2 0 3.57-.44 4.68-.79.69-.23 1.23-.4 1.79-.4.65 0 2.1 1.69 2.97 3.19a1 1 0 0 0 .87.51l.04-.01.07.01c0 .03.03.1.03.23 0 2.85-.67 3.39-1.2 3.5a1 1 0 0 0-.88.66c-1.75 4.9-5.01 8.07-8.3 8.07-3.3 0-6.56-3.17-8.3-8.07a1 1 0 0 0-.86-.66c-.54-.1-1.22-.61-1.22-3.5 0-.14.02-.21 0-.22zM39.1 45.7a2.04 2.04 0 1 0 4.07 0 2.04 2.04 0 0 0-4.07 0z'/%3E%3Cpath d='M15.7 55h28.6a5.77 5.77 0 0 0 5.77-5.77v-1.22c0-5.7-3.13-10.93-7.94-13.74v7.53a4.03 4.03 0 1 1-2 0v-8.52c-.46-.18-.92-.36-1.4-.5-.34-.1-.72-.01-.98.24-2.33 2.26-5.01 3.45-7.74 3.45-2.73 0-5.41-1.19-7.75-3.45a1 1 0 0 0-.98-.24c-.64.2-1.26.43-1.86.7l1.12 5.47c2.16.12 4.44 2.27 6.05 5.8.54 1.18.57 2.5.08 3.52A2.6 2.6 0 0 1 25 49.73a1 1 0 0 1-.51-1.93c.18-.05.3-.23.37-.38.23-.49.2-1.2-.08-1.83-1.4-3.04-3.4-4.98-4.79-4.61-1.37.37-2.14 3.05-1.82 6.38.07.69.4 1.32.85 1.64.13.09.33.19.51.13a1 1 0 1 1 .52 1.93c-.2.06-.41.09-.63.09-.52 0-1.06-.18-1.54-.51a4.24 4.24 0 0 1-1.7-3.08c-.38-3.94.55-6.98 2.42-8.13l-1.02-4.99a16.02 16.02 0 0 0-7.64 13.57v1.22A5.78 5.78 0 0 0 15.7 55z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-size: contain; background-position: center; top: 50%; transform: translateY(-50%); left: 7px; opacity: 0.8; transition: all 0.3s ease;}
+
+
+.medicos-list li:hover { background-color: #05acbd2b; }
+.medicos-list li:hover::before{opacity: 1;}
+
+
+.loading,
+.error {
+  color: #e74c3c;
+  font-size: 18px;
+}
+
+.medicos-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.medicos-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 30px;
+}
+.btn-ajudar {
+  background-color: #00acbd;
+  color: white;
+  border: none;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  outline: 4px solid transparent;
+  transition: all 0.5s ease;
+}
+.btn-ajudar:hover{background-color: #516D8A;outline: 4px solid #10549845;}
+
+.btn-ver {
+  background-color: #00acbd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+ul.acessados li{position: relative;}
+ul.acessados li::after{content: ""; display: block; position:absolute; width: 30px; height: 30px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Cpath fill='%2345c9a5' d='M439.5 143.28c10.47-21.86 8.99-48.35-8.98-66.32l-7.48-7.48c-17.97-17.97-45.17-20.83-66.32-8.98-14.89 8.33-46.39-9-48.72-20.23C303.1 16.7 280.35 0 255.1 0l-12.85.65a55.58 55.58 0 0 0-52.76 55.51C190.5 69 168.5 78.5 155.72 70.15a56.16 56.16 0 0 0-79.42 0l-6.15 6.15c-18.81 18.8-21 47.34-8.04 69.3 8.89 15.07.22 41.73-14.38 45.32C21.16 197.46 0 217 0 245.8v9.3c0 25.5 18.58 44.53 41.69 52.73 23.98 8.5 22.09 43.68 19.63 47.89a56.18 56.18 0 0 0 8.83 67.98l6.15 6.15c18.34 18.34 45.72 20.48 67.66 9.02 15.7-8.2 45.04 7.13 47.47 19.67 4.72 24.29 28.3 41.46 54.22 41.46h8a56.88 56.88 0 0 0 54.23-39.7c4.76-15.05 27.79-30.3 50.7-20.66 21.8 9.17 48.65 6.69 65.68-10.35l5.6-5.59a56.16 56.16 0 0 0 0-79.42c-9.86-8.95 2.8-33.61 13.98-33.77A56.16 56.16 0 0 0 500 254.35v-9.62c0-25.82-17.14-48.86-41.27-54.16-16.23-3.57-24.48-36.32-19.23-47.29z'/%3E%3Cpath fill='%23fff' d='m206.25 326.33-65.17-65.17a20 20 0 1 1 28.29-28.29l51.03 51.03 110.23-110.23a20 20 0 1 1 28.28 28.28L234.54 326.33c-8.2 7-22.87 6-28.29 0z'/%3E%3C/svg%3E"); background-size: contain; background-repeat: no-repeat; right: 60px; top: 50%; transform: translateY(-50%);} 
+
+.medico-busca{margin: 0 auto 20px;}
